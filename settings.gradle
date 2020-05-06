@@ -1,2 +1,7 @@
 rootProject.name='ALiYunVideoDemo'
 include ':app'
+include ':oss'
+include ':upload'
+include ':player'
+include ':common'
+include ':core'
