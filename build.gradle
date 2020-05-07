@@ -32,6 +32,7 @@ allprojects {
         mavenCentral()
         maven() { url 'https://maven.aliyun.com/repository/releases' }
 
+        maven { url "https://jitpack.io" }
     }
 }
 

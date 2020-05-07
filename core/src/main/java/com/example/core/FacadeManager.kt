@@ -1,7 +1,9 @@
 package com.example.core
 
+import com.example.common.extend.ContextExtend
 import com.example.player.PlayerManager
 import com.example.upload.UploadManager
+import leavesc.reactivehttp.core.ReactiveHttp
 
 /**
  * <pre>
@@ -12,6 +14,15 @@ import com.example.upload.UploadManager
  * </pre>
  */
 object FacadeManager {
+
+    init {
+        //初始化 Http 相关配置
+        ReactiveHttp.Builder(ContextExtend.appContext, "http://192.168.97.6/")
+    }
+
+    fun initAuth() {
+
+    }
 
     fun init() {
         PlayerManager.initPlayer()
