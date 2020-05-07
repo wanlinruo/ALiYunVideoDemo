@@ -1,7 +1,8 @@
-package com.example.core.dataSource
+package com.example.core.http.dataSource
 
-import com.example.core.api.ApiService
-import com.example.core.getSign
+import com.example.common.extend.getSign
+import com.example.core.http.api.ApiService
+import com.example.core.http.vo.UploadAuthDTO
 import leavesc.reactivehttp.core.callback.RequestCallback
 import leavesc.reactivehttp.core.datasource.RemoteDataSource
 import leavesc.reactivehttp.core.viewmodel.IUIActionEvent
@@ -18,10 +19,9 @@ class CoreDataSource(baseViewModelEvent: IUIActionEvent? = null) :
     RemoteDataSource<ApiService>(baseViewModelEvent, ApiService::class.java) {
 
 
-    fun requestUserChannelList(callback: RequestCallback<String>) {
-//        execute(callback) {
-//
-//            getService().requestUserChannelList(getSign(null))
-//        }
+    fun getUploadAuth(callback: RequestCallback<UploadAuthDTO>) {
+        execute(callback) {
+            getService().getUploadAuth(getSign(null))
+        }
     }
 }

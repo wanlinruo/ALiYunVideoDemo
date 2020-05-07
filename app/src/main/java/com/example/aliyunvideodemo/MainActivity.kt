@@ -8,10 +8,12 @@ import com.example.core.ImpInitInterface
 
 class MainActivity : AppCompatActivity() {
 
+    private val manager = FacadeManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        FacadeManager.init()
+        manager.getUploadAuth()
     }
 }

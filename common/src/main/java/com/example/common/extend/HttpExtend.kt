@@ -1,15 +1,12 @@
-package com.example.core
+package com.example.common.extend
 
-import com.example.common.extend.MD5Util
-import com.example.common.extend.toAddStr
-import leavesc.reactivehttp.core.datasource.BaseRemoteDataSource
 
 /**
  * 作者：CZY
  * 时间：2020/5/6 17:07
  * 描述：
  */
-fun BaseRemoteDataSource<*>.getSign(encryption: Map<String, Any>?): Map<String, Any> {
+fun getSign(encryption: Map<String, Any>?): Map<String, Any> {
     return EncryptionUtils.setEncryption(encryption)
 }
 

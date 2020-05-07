@@ -11,6 +11,9 @@ package com.example.common
 interface Api {
 
     companion object {
+
+        const val baseApi = "http://192.168.97.6/"
+
         //获取上传凭证信息
         const val getVideoIdAddr = "/content/vodInfo/getVideoIdAddr"
     }
