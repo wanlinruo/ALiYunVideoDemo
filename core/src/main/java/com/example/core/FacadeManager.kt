@@ -20,7 +20,7 @@ import java.util.logging.Logger
  */
 object FacadeManager {
 
-    private val datasource = CoreDataSource()
+    private val dataSource = CoreDataSource()
 
     init {
         HttpManager.initHttp()
@@ -30,9 +30,10 @@ object FacadeManager {
 
 
     fun getUploadAuth() {
-        datasource.getUploadAuth(object : RequestCallback<UploadAuthDTO> {
+        dataSource.getUploadAuth(object : RequestCallback<UploadAuthDTO> {
             override fun onSuccess(data: UploadAuthDTO) {
                 Log.d("haha", "data$data")
+
             }
 
             override fun onFail(exception: BaseException) {

@@ -12,9 +12,9 @@ interface Api {
 
     companion object {
 
-        const val baseApi = "http://192.168.97.6/"
+        const val baseApi = "http://192.168.97.6:9005/"
 
         //获取上传凭证信息
-        const val getVideoIdAddr = "/content/vodInfo/getVideoIdAddr"
+        const val getVideoIdAddr = "content/vodInfo/getVideoIdAddr"
     }
 }

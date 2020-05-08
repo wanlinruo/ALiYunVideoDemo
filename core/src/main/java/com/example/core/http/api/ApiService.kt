@@ -5,6 +5,7 @@ import com.example.core.http.HttpResBean
 import com.example.core.http.vo.UploadAuthDTO
 import retrofit2.http.GET
 import retrofit2.http.HeaderMap
+import retrofit2.http.QueryMap
 
 /**
  * <pre>
@@ -19,5 +20,5 @@ interface ApiService {
     //获取上传凭证信息
     @JvmSuppressWildcards
     @GET(Api.getVideoIdAddr)
-    suspend fun getUploadAuth(@HeaderMap signMap: Map<String, Any>): HttpResBean<UploadAuthDTO>
+    suspend fun getUploadAuth(@HeaderMap signMap: Map<String, Any>, @QueryMap map: Map<String, Any>): HttpResBean<UploadAuthDTO>
 }

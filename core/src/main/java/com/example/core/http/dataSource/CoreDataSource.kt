@@ -21,7 +21,8 @@ class CoreDataSource(baseViewModelEvent: IUIActionEvent? = null) :
 
     fun getUploadAuth(callback: RequestCallback<UploadAuthDTO>) {
         execute(callback) {
-            getService().getUploadAuth(getSign(null))
+            val map = mapOf("appToken" to "4546456465")
+            getService().getUploadAuth(getSign(null), map)
         }
     }
 }
