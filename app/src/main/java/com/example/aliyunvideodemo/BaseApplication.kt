@@ -2,6 +2,8 @@ package com.example.aliyunvideodemo
 
 import android.app.Application
 import com.example.common.extend.ContextExtend
+import com.example.common.kv.FinalKV
+import com.example.core.FacadeManager
 
 /**
  * <pre>
@@ -17,5 +19,9 @@ class BaseApplication : Application() {
         super.onCreate()
         //全局使用
         ContextExtend.appContext = this
+//        KVHolderKt.init()
+
+        //初始化全部组件
+        FacadeManager.initAll()
     }
 }

@@ -33,4 +33,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //MMKV
+    implementation 'com.tencent:mmkv-static:1.1.1'
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //网络
+    implementation 'com.github.leavesC:ReactiveHttp:0.0.10'
+
+
+
 }

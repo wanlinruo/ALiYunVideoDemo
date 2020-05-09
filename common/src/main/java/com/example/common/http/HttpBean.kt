@@ -1,4 +1,4 @@
-package com.example.core.http
+package com.example.common.http
 
 import leavesc.reactivehttp.core.bean.IHttpResBean
 

@@ -1,8 +1,7 @@
-package com.example.core.http.dataSource
+package com.example.upload.api
 
+import com.example.common.dto.UploadAuthDTO
 import com.example.common.extend.getSign
-import com.example.core.http.api.ApiService
-import com.example.core.http.vo.UploadAuthDTO
 import leavesc.reactivehttp.core.callback.RequestCallback
 import leavesc.reactivehttp.core.datasource.RemoteDataSource
 import leavesc.reactivehttp.core.viewmodel.IUIActionEvent
@@ -10,19 +9,17 @@ import leavesc.reactivehttp.core.viewmodel.IUIActionEvent
 /**
  * <pre>
  *     author : wanlinruo
- *     time   : 2020/05/07/19:12
+ *     time   : 2020/05/09/18:16
  *     desc   :
  *     version: 1.0
  * </pre>
  */
-class CoreDataSource(baseViewModelEvent: IUIActionEvent? = null) :
+class UploadDataSource(baseViewModelEvent: IUIActionEvent? = null) :
     RemoteDataSource<ApiService>(baseViewModelEvent, ApiService::class.java) {
-
 
     fun getUploadAuth(callback: RequestCallback<UploadAuthDTO>) {
         execute(callback) {
-            val map = mapOf("appToken" to "4546456465")
-            getService().getUploadAuth(getSign(null), map)
+            getService().getUploadAuth(getSign(null))
         }
     }
 }

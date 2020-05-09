@@ -1,4 +1,4 @@
-package com.example.core.http.vo
+package com.example.common.dto
 
 /**
  * <pre>

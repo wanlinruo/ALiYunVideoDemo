@@ -1,4 +1,4 @@
-package com.example.core.http
+package com.example.common.http
 
 import com.example.common.Api
 import com.example.common.extend.ContextExtend
