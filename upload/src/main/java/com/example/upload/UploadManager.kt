@@ -31,11 +31,12 @@ object UploadManager {
 
     private val uploader = VODUploadClientImpl(ContextExtend.appContext)
 
-    /**
-     * 初始化
-     */
-    fun initUpload() {
-        OSSLog.enableLog()
+    init {
+        //开启日志
+        if (BuildConfig.DEBUG)
+            OSSLog.enableLog()
+
+        //初始化
         uploader.init(object : VODUploadCallback() {
             /**
              * 上传完成回调

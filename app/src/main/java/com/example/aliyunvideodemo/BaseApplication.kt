@@ -20,8 +20,5 @@ class BaseApplication : Application() {
         //全局使用
         ContextExtend.appContext = this
 //        KVHolderKt.init()
-
-        //初始化全部组件
-        FacadeManager.initAll()
     }
 }

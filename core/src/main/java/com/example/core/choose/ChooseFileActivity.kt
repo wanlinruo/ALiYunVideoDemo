@@ -13,6 +13,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.bumptech.glide.request.RequestOptions
 import com.example.common.bo.VodInfoBO
+import com.example.core.FacadeManager
 import com.example.core.R
 import com.example.upload.UploadManager
 import com.zhihu.matisse.Matisse
@@ -52,7 +53,7 @@ class ChooseFileActivity : AppCompatActivity() {
 
                         val vodInfoBO =
                             VodInfoBO(obtainPathResult[0], "Android测试文件", "Android-测试上传文件是否成功")
-                        UploadManager.getUploadAuth(vodInfoBO)
+                        FacadeManager.getUploadAuth(vodInfoBO)
                     }
                 }
             }

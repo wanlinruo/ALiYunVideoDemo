@@ -1,7 +1,7 @@
 package com.example.core
 
+import com.example.common.bo.VodInfoBO
 import com.example.common.http.HttpManager
-import com.example.player.PlayerManager
 import com.example.upload.UploadManager
 
 /**
@@ -14,10 +14,12 @@ import com.example.upload.UploadManager
  */
 object FacadeManager {
 
-    fun initAll(){
+    init {
         HttpManager.initHttp()
-        PlayerManager.initPlayer()
-        UploadManager.initUpload()
+    }
+
+    fun getUploadAuth(vodInfoBO: VodInfoBO) {
+        UploadManager.getUploadAuth(vodInfoBO)
     }
 
     fun startUpload() {
