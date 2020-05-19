@@ -44,6 +44,7 @@ object UploadManager {
              * @param info 上传文件信息
              */
             override fun onUploadSucceed(info: UploadFileInfo) {
+//                dataSource.saveUpload()
                 OSSLog.logDebug("onsucceed ------------------" + info.filePath)
             }
 

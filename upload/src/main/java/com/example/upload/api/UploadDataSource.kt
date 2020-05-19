@@ -22,4 +22,11 @@ class UploadDataSource(baseViewModelEvent: IUIActionEvent? = null) :
             getService().getUploadAuth(getSign(null))
         }
     }
+
+    fun saveUpload(videoId: String, callback: RequestCallback<Any>) {
+        execute(callback) {
+            val map = mapOf("videoId" to videoId)
+            getService().saveUpload(getSign(map), map)
+        }
+    }
 }

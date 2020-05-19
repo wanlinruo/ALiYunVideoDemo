@@ -118,4 +118,9 @@ object PlayerManager {
             VcPlayerLog.v(TAG, "截图事件-bitmap=$bitmap,with=$with,height=$height")
         }
     }
+
+    private fun initConfig() {
+
+    }
+
 }

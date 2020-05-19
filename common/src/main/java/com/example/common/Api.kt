@@ -16,5 +16,8 @@ interface Api {
 
         //获取上传凭证信息
         const val getVideoIdAddr = "content/vodInfo/getVideoIdAddr"
+
+        //保存视频上传信息接口
+        const val saveUpload = "/content/vodInfo/saveUpload"
     }
 }

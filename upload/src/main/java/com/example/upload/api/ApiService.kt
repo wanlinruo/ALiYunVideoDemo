@@ -3,9 +3,7 @@ package com.example.upload.api
 import com.example.common.Api
 import com.example.common.http.HttpResBean
 import com.example.common.dto.UploadAuthDTO
-import retrofit2.http.GET
-import retrofit2.http.HeaderMap
-import retrofit2.http.QueryMap
+import retrofit2.http.*
 
 /**
  * <pre>
@@ -21,4 +19,14 @@ interface ApiService {
     @JvmSuppressWildcards
     @GET(Api.getVideoIdAddr)
     suspend fun getUploadAuth(@HeaderMap signMap: Map<String, Any>): HttpResBean<UploadAuthDTO>
+
+
+    //获取上传凭证信息
+    @JvmSuppressWildcards
+    @POST(Api.saveUpload)
+    @FormUrlEncoded
+    suspend fun saveUpload(
+        @HeaderMap signMap: Map<String, Any>,
+        @FieldMap paramsMap: Map<String, Any>
+    ): HttpResBean<Any>
 }
